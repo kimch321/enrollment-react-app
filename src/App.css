@@ -3,7 +3,7 @@
     font-size: 26px;
     text-align: center;
     width: 500px;
-    padding:100px;
+    padding:100px 100px 35px 100px;
 }
 .enrolForm input[type=text] {
     margin :20px;
@@ -28,6 +28,17 @@
     font-family: inherit;
     font-size: 30px;
     font-style: italic;
+    margin-left:250px;
+    display: flex;
+}
+.redOne
+{
+    color:red;
+    font-family: inherit;
+    font-size: 30px;
+    font-style: italic;
+    margin-left:150px;
+    display: flex;
 }
 .App {
     font-family: sans-serif;
