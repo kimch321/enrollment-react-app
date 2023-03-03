@@ -23,8 +23,19 @@ const EnrollmentForm = (props) => {
         if (props.curruntSeat !== 0){
             props.setUpdateSeats(props.curruntSeat-1)
             msg = `환영합니다 ${firstName} ${lastName} 님`;
-            setMsgStyle('message')
-            setEmailWelcomeMassage(`${email} 로 등록 정보를 발송했습니다.`)
+            setMsgStyle('message');
+            setEmailWelcomeMassage(`${email} 로 등록 정보를 발송했습니다.`);
+            // 등록 완료된 학생정보에 사용할 key 생성
+            const rndKey = Math.floor(1000+Math.random() * 9000);
+            // 생성한 key와 등록완료된 학생정보를 props에 저장
+            let stud = {
+                key:rndKey,
+                fname:firstName,
+                lname:lastName,
+                program:props.chosenProgram,
+                email:email
+            }
+            props.setStuDetails(stud)
         }
         setWelcomeMassage(msg);
 

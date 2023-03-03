@@ -9,6 +9,9 @@ const App = () => {
     const [program, setProgram] = useState("UG");  // 프로그램 종류
     const [ugSeats, setUgSeats] = useState(60);  // ug 참가가능 인원수
     const [pgSeats, setPgSeats] = useState(1);  // pg 참가가능 인원수
+
+    // 과정 등록한 학생들 정보를 저장하는 변수 선언
+    const [studDetails, setStudDetails] = useState({});
     const handleChange = (e) => {
         setProgram(e.target.value);
     };
@@ -32,10 +35,16 @@ const App = () => {
                     <li><label>{(program === "UG") ? ugSeats : pgSeats}</label></li>
                 </ul>
             </div>
-            <EnrollmentForm chosenProgram={program}
-                            curruntSeat={(program === 'UG')? ugSeats : pgSeats}
-             setUpdateSeats={setUpdateSeats}/>
-            <EnrolList />
+            <EnrollmentForm
+                chosenProgram = {program}
+                curruntSeat = {(program === 'UG')? ugSeats : pgSeats}
+                setUpdateSeats = {setUpdateSeats}
+                setStuDetails = {setStudDetails}
+            />
+            <EnrolList
+                studDetails = {studDetails}
+                setStudDetails = {setStudDetails}
+            />
         </div>
     );
 };
