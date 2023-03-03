@@ -19,18 +19,15 @@ const App = () => {
     };
     return (
         <div className={"App"}>
-            <div className={"program"}>
-                <label>학사 프로그램 참가가능 인원수: {ugSeats}</label>
-                <br />
-                <label>석사 프로그램 참가가능 인원수: {pgSeats}</label>
-                <br />
-                <br />
-                <label>프로그램 종류 : </label>
-                <select className={"appDropDowns"} onChange={handleChange} value={program}>
-                    <option value={"UG"}>학사과정(대학생)</option>
-                    <option value={"PG"}>석사과정(대학원)</option>
-                </select>
-                <br /><br />
+            <div className={"programs"}>
+                <h3 className={"title"}>프로그램 참가 등록양식</h3>
+                <ul className={"ulEnrol"}>
+                    <li onChange={handleChange}  className={"parentLabels"}>
+                        <input type="radio" value={"UG"} name={"programgroup"} defaultChecked />학사과정
+                        <input type="radio" value={"PG"} name={"programgroup"} />학사과정
+                    </li>
+                    <li><label>{(program === "UG") ? ugSeats : pgSeats}</label></li>
+                </ul>
             </div>
             <EnrollmentForm chosenProgram={program}
                             curruntSeat={(program === 'UG')? ugSeats : pgSeats}
