@@ -23,7 +23,6 @@ const columns = [
 // 컬럼 정의시 사용했던 fieldName으로 값 초기화
 let items = [];
 
-
 const EnrolList = (props) => {
     // 과정 등록 학생 데이터가 추가 될때 마다 UI를 재랜더링하기 위해 useEffect 리액트 훅 사용
     // useEffect : 컴포넌트 생명주기에 따라 dom 렌더링 처리.
