@@ -14,7 +14,7 @@
     font-family: inherit;
     font-size: inherit;
 }
-.enrolForm button[type=submit]
+.enrolForm input[type=submit]
 {
     background: #4691A4;
     font-family: inherit;
@@ -28,4 +28,23 @@
     font-family: inherit;
     font-size: 30px;
     font-style: italic;
+}
+.App {
+    font-family: sans-serif;
+    font-size: 26px;
+    text-align: left;
+    width: 100%;
+    padding-top: 50px;
+    float: left;
+}
+.programs {
+    padding-left: 100px;
+    width: 100%;
+    float: left;
+}
+.appDropDowns {
+    color: black;
+    font-family: inherit;
+    font-size: inherit;
+    margin-left: 10px;
 }

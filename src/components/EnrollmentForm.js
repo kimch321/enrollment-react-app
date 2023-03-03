@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import '../App.css';
 
-const EnrollmentForm = () => {
+const EnrollmentForm = (props) => {
     // 폼에 입력한 이름/성을 기억하기 하기위해 state형 변수 선언
     // onBlur 이벤트 발생시 입력한 이름/성을 firstName, lastName변수에 저장
     const [firstName, setFirstName] = useState("");
@@ -14,16 +14,20 @@ const EnrollmentForm = () => {
     // 폼 아래쪽에 나타냄
     const handleSubmit = (e) => {
         setWelcomeMassage(`환영합니다 ${firstName} ${lastName}`);
+        // props로 전달받은 함수 setUpdateSeats를 이용해서 상위 컴포넌트의 변수를 조작함
+        props.setUpdateSeats(props.curruntSeat-1); // 참여가능 인원수 감소
         e.preventDefault(); // submit 기능 중지
     };
     return(
         <div>
             <form className={"enrolForm"} onSubmit={handleSubmit}>
-                <h1>대학생 등록양식</h1>
+                <h1>{props.chosenProgram} 등록양식</h1>
                 <div>
                     <label>First Name</label>
                     <input type={"text"} name={"fname"}
-                        onBlur={(e) => setFirstName(e.target.value)} />
+                        onBlur={(e) => {
+                            setFirstName(e.target.value)
+                        }} />
                 </div>
                 <div>
                     <label>Last Name</label>
