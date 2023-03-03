@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import EnrollmentForm from "./components/EnrollmentForm";
+import EnrolList from "./components/EnrolList";
+
+
 
 // EnrollmentForm이라는 폼을 return하도록 정의된 App 컴포넌트
 const App = () => {
@@ -32,6 +35,7 @@ const App = () => {
             <EnrollmentForm chosenProgram={program}
                             curruntSeat={(program === 'UG')? ugSeats : pgSeats}
              setUpdateSeats={setUpdateSeats}/>
+            <EnrolList />
         </div>
     );
 };

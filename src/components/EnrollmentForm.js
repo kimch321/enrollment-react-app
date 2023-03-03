@@ -19,6 +19,7 @@ const EnrollmentForm = (props) => {
         // props로 전달받은 함수 setUpdateSeats를 이용해서 상위 컴포넌트의 변수를 조작함
         let msg = `더 이상 등록할 수 없습니다.`
         setMsgStyle('redOne')
+        setEmailWelcomeMassage('')
         if (props.curruntSeat !== 0){
             props.setUpdateSeats(props.curruntSeat-1)
             msg = `환영합니다 ${firstName} ${lastName} 님`;
