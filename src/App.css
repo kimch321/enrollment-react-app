@@ -9,8 +9,8 @@
     position: absolute;
     background: rgba(22, 61, 97, 0.794);
     left: 50%;
-    height: 550px;
-    width: 35%;
+    height: 500px;
+    width: 40%;
     transform: translate(-50%, 0%);
     text-align: center;
     color: rgba(31, 226, 80, 0.671);
@@ -69,8 +69,28 @@
     list-style-type: none;
     padding: 0;
 }
-#btnEnrol {
-    border: 1px solid ;
+::placeholder {
+    color: rgba(83, 70, 70, 0.596);
+    opacity: 1;
+}
+.message {
+    color:rgba(31, 226, 80, 0.671);
+}
+.actionIcon {
+    font-size: 16px;
+    color: rgb(77, 133, 141);
+    cursor: pointer;
+}
+.redOne {
+    color: red;
+    font-style: italic;
+    font-size: 35px;
+    padding-top: 45px;
+    padding-left: 120px;
+    display: flex;
+}
+.btn {
+    border: 1px solid;
     background: rgb(50, 58, 59);
     font-size: 18px;
     color: white;
@@ -80,18 +100,6 @@
     transition: 0.4s;
     margin-bottom: 30px;
 }
-::placeholder {
-    color: rgba(83, 70, 70, 0.596);
-    opacity: 1;
-}
-.message {
-    color: blue;
-}
-.actionIcon {
-    font-size: 16px;
-    color: rgb(77, 133, 141);
-    cursor: pointer;
-}
-.redOne {
-    color: red;
+#btnCancel {
+    margin-left:20px;
 }
