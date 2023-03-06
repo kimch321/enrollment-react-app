@@ -5,7 +5,15 @@ import '../App.css';
 import {DetailsList} from '@fluentui/react/lib/DetailsList';
 
 // 과정 등록 학생 리스트 컬럼 정의(이름 ,성,과정, 이메일)
+// 현재 컬럼 앞뒤로 수정, 삭제 버튼 추가
 const columns = [
+    {
+        key : 'edit',
+        name: '수정',
+        fieldName: 'edit',
+        minWidth: 50,
+        isResizable: false
+    },
     {
       key:'fname', name:'Fist Name', fieldName: 'fname', minWidth: 90, isResizable:false
     },
@@ -18,6 +26,13 @@ const columns = [
     {
         key:'email', name:'이메일', fieldName: 'email', minWidth: 90, isResizable:false
     },
+    {
+        key : 'delete',
+        name: 'Delete',
+        fieldName: 'delete',
+        minWidth: 50,
+        isResizable: false
+    }
 ]
 
 // 컬럼 정의시 사용했던 fieldName으로 값 초기화

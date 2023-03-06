@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { MdEdit, MdDelete } from 'react-icons/md'
 import '../App.css';
 
 const EnrollmentForm = (props) => {
@@ -33,7 +34,9 @@ const EnrollmentForm = (props) => {
                 fname:firstName,
                 lname:lastName,
                 program:props.chosenProgram,
-                email:email
+                email:email,
+                edit: <MdEdit ClassName={"actionIcon"} />,
+                delete: <MdDelete className={"actionIcon"}/>
             }
             props.setStuDetails(stud)
         }
