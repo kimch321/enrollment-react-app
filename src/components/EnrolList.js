@@ -43,7 +43,6 @@ const EnrolList = (props) => {
     // useEffect : 컴포넌트 생명주기에 따라 dom 렌더링 처리.
     // props 객체에 값이 존재할때 마다 detailsList에 랜더링해서 화면에 표시
     useEffect(()=> {
-
         // 삭제 기능 수행
         // eslint-disable-next-line no-restricted-globals
         if (props.action === 'delete' && confirm('정말로 삭제하시겠습니까?')) {
@@ -57,8 +56,10 @@ const EnrolList = (props) => {
             );
             // 삭제한 학생에 대한 참가가능 인원수 복구
             props.restoreSeats(deleteItem.program);
+        } else { // 대화상자에서 취소를 클릭하는 경우
+            props.setAction(''); // action 초기화
         }
-        // ??
+
 
         // 등록하기와 수정하기를 구분하는 조건 추가
         const curItemKey = props.studDetails.key;

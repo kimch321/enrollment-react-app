@@ -63,6 +63,7 @@ const App = () => {
                 setStudDetails = {setStudDetails}
                 selectedItemKey = {selItemKey}
                 action ={action}
+                setAction = {setAction}
                 restoreSeats = {restoreSeats}
             />
         </div>
